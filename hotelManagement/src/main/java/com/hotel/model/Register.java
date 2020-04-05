@@ -7,22 +7,22 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Customer {
-    private Long id;
+public class Register {
+	private Long id_register;
     private String ktp;
     private String nama;
     private String telpon;
     private String email;
-	public Customer() {
+    public Register() {
 	}
-	
-	@Id
+    
+    @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long getId() {
-		return id;
+	public Long getId_register() {
+		return id_register;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setId_register(Long id_register) {
+		this.id_register = id_register;
 	}
 	public String getKtp() {
 		return ktp;
@@ -46,8 +46,6 @@ public class Customer {
 		return email;
 	}
 	public void setEmail(String email) {
-		this.email =email;
-	}
-
-    
+		this.email = email;
+	} 
 }
