@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Register Management</title>
+
+</head>
+<body>
+<div align="center">
+    <h1>Register List List</h1>
+    <a href="/newregister">Insert New Register</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nomor KTP</th>
+                <th>Nama</th>
+                <th>Telpon</th>
+                <th>Email</th>
+                <th colspan = "2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="register : ${listRegister}">
+                <td th:text="${register.id_register}">ID</td>
+                <td th:text="${register.ktp}">Nomor KTP</td>
+                <td th:text="${register.nama}">Nama</td>
+                <td th:text="${register.telpon}">Telpon</td>
+                <td th:text="${register.email}">Email</td>
+                <td>Update</td>
+                <td>Delete</td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>
