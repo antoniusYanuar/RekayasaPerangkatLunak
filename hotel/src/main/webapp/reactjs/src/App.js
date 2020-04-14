@@ -1,12 +1,10 @@
 import React from "react";
 import "./App.css";
-import NavBarComponent from "./component/NavBarComponent";
-import SignUp from "./component/SignUp";
-import Dashboard from "./component/Dashboard";
+import Dashboard_customer from "./component/Dashboard_customer";
 
 function App() {
   return (
-    <Dashboard />
+    <Dashboard_customer />
     // <div className="App">
     //
     //   <p>Welcome To Our Hotel</p>
